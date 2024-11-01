@@ -1,0 +1,132 @@
+.part1 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 30px auto 0;
+}
+
+.image-det {
+    width: 45%;
+}
+
+.image-det img {
+    width: 90%;
+    height: 90%;
+}
+
+.det {
+    width: 45%;
+}
+
+.det h1 {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #F8931D;
+    margin-bottom: 80px;
+}
+
+.det p {
+    line-height: 40px;
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn button {
+    background-color: #65BF62;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 40%;
+    border-radius: 12px;
+    margin-top: 17%;
+    transition: 1.2s;
+}
+.btn button:hover{
+    transform: scale(1.1);
+    background-color: #048600;
+    color: aliceblue;
+}
+
+.revi {
+    background-color: blueviolet;
+    border-radius: 20px;
+    width: 30%;
+    padding: 20px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.revi h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.review-form .message-section,
+.review-form .rating-section {
+    margin-bottom: 15px;
+}
+
+.review-form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.rating-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.submit-section button {
+    background-color: #F8931D;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.submit-section button:hover {
+    background-color: #d17d1b;
+}
+
+.rate {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.rating-options{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.text1{
+    color: black;
+}
+.review-display {
+    margin-top: 20px;
+  }
+  
+  .single-review {
+    padding: 10px;
+    background-color:rgb(255, 0, 255);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+  .review-display{
+    box-shadow: #d17d1b;
+  }
+  

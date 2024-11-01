@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detaille</title>
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+    <header class="relative">
+        <nav class="bg-purple-900 h-20 flex items-center justify-between px-6">
+            <div>
+                <a href="index.html">
+                    <img src="images/logo1.jpg" alt="Website Logo" class="w-32">
+                </a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <ul class="flex space-x-8 text-white">
+                    <li><a href="index.html" class="hover:text-red-800">Home</a></li>
+                    <li><a href="#" class="hover:text-red-800">Popular Movies</a></li>
+                    <li><a href="favorites.html" class="hover:text-red-800">My List</a></li>
+                </ul>
+            </div>
+            <div>
+                <form action="#" method="GET" class="ml-5">
+                    <input id="searchInput" type="text" placeholder="Search..." class="bg-white text-purple-900 px-3 py-1 rounded focus:outline-none w-64">
+                </form>
+            </div>
+            <div> 
+                <button class="bg-white text-purple-900 px-4 py-2 rounded hover:bg-slate-700 hover:text-slate-100 h-10 w-24">
+                    Somber
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="part1">
+                <div class="image-det">
+                    <img src="images/photo1.jpg" alt="">
+                </div>
+                <div class="det">
+                    <h1>Title film</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus aut maxime quae laudantium
+                        delectus quisquam consequuntur nostrum. Facilis optio, ut vitae voluptatibus, praesentium, sint
+                        vero ipsam nulla maxime at sed numquam. Distinctio necessitatibus harum doloribus debitis quis
+                        animi labore possimus, et accusantium maiores provident, nihil in quaerat cumque odio?</p>
+                        <div class="btn">
+                            <button>Telecharger</button>
+                            <button>Watch</button>
+                        </div>
+                        <div>
+                            <p class="rate">⭐⭐⭐⭐☆ 1254 user</p>
+                        </div>
+                </div>
+                <div class="revi">
+                    <h2>Leave a Review</h2>
+                    <form action="#" method="POST" class="review-form">
+                      <div class="message-section">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your review here..." class="text1"></textarea>
+                      </div>
+                      <div class="rating-section">
+                        <p>Your Rating:</p>
+                        <div class="rating-options">
+                          <div>
+                            <input type="radio" id="star5" name="rating" value="5" class="rte">
+                            <label for="star5">⭐⭐⭐⭐⭐</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="star4" name="rating" value="4" class="rte">
+                            <label for="star4">⭐⭐⭐⭐</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="star3" name="rating" value="3" class="rte">
+                            <label for="star3">⭐⭐⭐</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="star2" name="rating" value="2" class="rte">
+                            <label for="star2">⭐⭐</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="star1" name="rating" value="1" class="rte">
+                            <label for="star1">⭐</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="submit-section">
+                        <button type="button" onclick="submitReview()">Submit Review</button>
+                      </div>
+                    </form>
+                    <div id="review-display" class="review-display">
+                     
+                    </div>
+                  </div>
+                  
+                
+                
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

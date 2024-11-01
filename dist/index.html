@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CinéFlix</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="relative">
+    <nav class="bg-purple-900 h-20 flex items-center justify-between px-6">
+      <div>
+        <a href="index.html">
+          <img src="images/logo1.jpg" alt="Website Logo" class="w-32">
+        </a>
+      </div>
+      <div class="flex items-center space-x-6">
+        <ul class="flex space-x-8 text-white">
+          <li><a href="index.html" class="hover:text-red-800">Home</a></li>
+          <li><a href="#" class="hover:text-red-800">Popular Movies</a></li>
+          <li><a href="favorites.html" class="hover:text-red-800">My List</a></li>
+        </ul>
+      </div>
+      <div>
+        <form action="#" method="GET" class="ml-5">
+          <input id="searchInput" type="text" placeholder="Search..." class="bg-white text-purple-900 px-3 py-1 rounded focus:outline-none w-64">
+        </form>
+      </div>
+      <div>
+        <button class="bg-white text-purple-900 px-4 py-2 rounded hover:bg-slate-700 hover:text-slate-100 h-10 w-24">Somber</button>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="w-full relative overflow-hidden">
+      <div class="w-full h-[90vh]">
+        <video autoplay loop muted plays-inline id="backgroundImage" class="object-cover w-full h-full">
+          <source src="images/5302616-uhd_4096_2160_25fps.mp4">
+        </video>
+        
+        <div class="absolute bottom-0 left-0 right-0 flex flex-wrap justify-center space-x-4 mb-8">
+          <div class="nav-buttons">
+            <button class="btn1 nav-button bg-white text-purple-900 rounded-full w-12 h-12 flex items-center justify-center text-xl hover:bg-purple-100 transition duration-200 ease-in-out shadow-lg transform hover:scale-110">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+          </div>
+          
+          <!-- Movie Items -->
+          <div class="movie-item p-2 relative">
+            <h1>Horror</h1>
+            <a href="detaille.html">
+              <img src="images/phoot.jpg" alt="" class="object-cover w-32 h-32 rounded float">
+            </a>
+            <i class="fas fa-heart absolute top-0 right-0 text-red-500 cursor-pointer" onclick="addToFavorites('Horror', 'images/photo.jpg')"></i>
+          </div>
+
+          <div class="movie-item p-2 relative">
+            <h1>Sea</h1>
+            <a href="detaille.html">
+              <img src="images/photo1.jpg" alt="" class="object-cover w-32 h-32 rounded float">
+            </a>
+            <i class="fas fa-heart absolute top-0 right-0 text-red-500 cursor-pointer" onclick="addToFavorites('Sea', 'images/photo1.jpg')"></i>
+          </div>
+
+          <div class="movie-item p-2 relative">
+            <h1>After</h1>
+            <a href="detaille.html">
+              <img src="images/photo2.jpg" alt="" class="object-cover w-32 h-32 rounded float">
+            </a>
+            <i class="fas fa-heart absolute top-0 right-0 text-red-500 cursor-pointer" onclick="addToFavorites('After', 'images/photo2.jpg')"></i>
+          </div>
+
+          <div class="movie-item p-2 relative">
+            <h1>Joker</h1>
+            <a href="detaille.html">
+              <img src="images/photo3.jpg" alt="" class="object-cover w-32 h-32 rounded float">
+            </a>
+            <i class="fas fa-heart absolute top-0 right-0 text-red-500 cursor-pointer" onclick="addToFavorites('Joker', 'images/photo3.jpg')"></i>
+          </div>
+
+          <div class="movie-item p-2 relative">
+            <h1>Jumanji</h1>
+            <a href="detaille.html">
+              <img src="images/photo4.jpg" alt="" class="object-cover w-32 h-32 rounded float">
+            </a>
+            <i class="fas fa-heart absolute top-0 right-0 text-red-500 cursor-pointer" onclick="addToFavorites('Jumanji', 'images/photo4.jpg')"></i>
+          </div>
+
+          <div class="movie-item p-2 relative">
+            <h1>Dark</h1>
+            <a href="detaille.html">
+              <img src="images/photo5.jpg" alt="" class="object-cover w-32 h-32 rounded float">
+            </a>
+            <i class="fas fa-heart absolute top-0 right-0 text-red-500 cursor-pointer" onclick="addToFavorites('Dark', 'images/photo5.jpg')"></i>
+          </div>
+          
+          <div class="nav-buttons">
+            <button class="btn2 nav-button bg-white text-purple-900 rounded-full w-12 h-12 flex items-center justify-center text-xl hover:bg-purple-100 transition duration-200 ease-in-out shadow-lg transform hover:scale-110">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

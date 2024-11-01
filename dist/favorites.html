@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="favor.css">
+</head>
+<body>
+    <header class="relative">
+        <nav class="bg-purple-900 h-20 flex items-center justify-between px-6">
+            <div>
+                <a href="index.html">
+                    <img src="images/logo1.jpg" alt="Website Logo" class="w-32">
+                </a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <ul class="flex space-x-8 text-white">
+                    <li><a href="index.html" class="hover:text-red-800">Home</a></li>
+                    <li><a href="#" class="hover:text-red-800">Popular Movies</a></li>
+                    <li><a href="favorites.html" class="hover:text-red-800">My List</a></li>
+                </ul>
+            </div>
+            <div>
+                <form action="#" method="GET" class="ml-5">
+                    <input id="searchInput" type="text" placeholder="Search..." class="bg-white text-purple-900 px-3 py-1 rounded focus:outline-none w-64">
+                </form>
+            </div>
+            <div> 
+                <button class="bg-white text-purple-900 px-4 py-2 rounded hover:bg-slate-700 hover:text-slate-100 h-10 w-24">
+                    Somber
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <video autoplay loop muted plays-inline id="backgroundImage" class="object-cover w-full h-full">
+        <source src="images/5302616-uhd_4096_2160_25fps.mp4">
+    </video>
+
+    <main class="p-6">
+        <h1 class="text-2xl text-center text-white mb-6">My Favorite Films</h1>
+        <div id="favoritesList" class="flex gap-4 justify-around">
+            <div id="slide1" class="slide bg-purple-900 w-96 "></div>
+            <div id="slide2" class="slide bg-purple-900 w-96"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
