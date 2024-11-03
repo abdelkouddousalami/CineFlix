@@ -7,11 +7,12 @@
     <title>Detaille</title>
     <link rel="stylesheet" href="detail.css">
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
-<body>
+<body class="dark:bg-slate-700">
     <header class="relative">
-        <nav class="bg-purple-900 h-20 flex items-center justify-between px-6">
+        <nav id="navb" class="bg-purple-900 h-20 flex items-center justify-between px-6 dark:bg-gray-800 dark:text-white">
             <div>
                 <a href="index.html">
                     <img src="images/logo1.jpg" alt="Website Logo" class="w-32">
@@ -19,8 +20,8 @@
             </div>
             <div class="flex items-center space-x-6">
                 <ul class="flex space-x-8 text-white">
-                    <li><a href="index.html" class="hover:text-red-800">Home</a></li>
-                    <li><a href="#" class="hover:text-red-800">Popular Movies</a></li>
+                    <li><a href="index.html" class="hover:text-red-800 dark:">Home</a></li>
+                    
                     <li><a href="favorites.html" class="hover:text-red-800">My List</a></li>
                 </ul>
             </div>
@@ -29,15 +30,77 @@
                     <input id="searchInput" type="text" placeholder="Search..." class="bg-white text-purple-900 px-3 py-1 rounded focus:outline-none w-64">
                 </form>
             </div>
-            <div> 
-                <button class="bg-white text-purple-900 px-4 py-2 rounded hover:bg-slate-700 hover:text-slate-100 h-10 w-24">
-                    Somber
-                </button>
+            <div>
+              <button id="darkModeToggle" class="bg-white text-purple-900 px-4 py-2 rounded hover:bg-slate-700 hover:text-slate-100 h-10 w-24" onclick="darkm()">
+                Somber
+              </button>
             </div>
+            
         </nav>
     </header>
     <main>
         <section>
+          <div class="container-slider">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="images/phoot.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo1.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo2.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">    
+                        <img src="images/photo3.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo4.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo5.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo2.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo3.jpg" alt="" id="img-slider">
+                    </div>
+                    <!-- doubled -->
+                    <div class="slide">
+                        <img src="images/phoot.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo1.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo2.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">    
+                        <img src="images/photo3.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo4.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo5.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo2.jpg" alt="" id="img-slider">
+                    </div>
+                    <div class="slide">
+                        <img src="images/photo3.jpg" alt="" id="img-slider">
+                    </div>
+                </div>
+            </div>
+        </div>
             <div class="part1">
                 <div class="image-det">
                     <img src="images/photo1.jpg" alt="">

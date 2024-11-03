@@ -1,3 +1,4 @@
+
 .part1 {
     display: flex;
     justify-content: space-evenly;
@@ -129,4 +130,116 @@
   .review-display{
     box-shadow: #d17d1b;
   }
-  
+ 
+  .slider {
+    height: 350px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(300px * 18); 
+    animation: scroll 40s linear infinite; 
+}
+
+.slide {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+#img-slider {
+    width: 85%;
+    height: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-300px * 9)); 
+    }
+}
+@media (max-width: 768px) {
+    .container-slider {
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+
+    .slider {
+        display: flex; /* Flex layout for the slider */
+    }
+
+    .slide {
+        flex: 0 0 auto; /* Ensure slides don't shrink */
+        width: 80%; /* Adjust width of each slide */
+        max-width: none; /* Remove max-width to allow more flexibility */
+        margin: 0 auto; /* Center slides */
+    }
+
+    .part1 {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 1rem; /* Add padding for spacing */
+    }
+
+    .image-det img {
+        width: 100%; /* Ensure image takes full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .det {
+        text-align: center; /* Center text */
+        margin-top: 1rem; /* Space between image and text */
+    }
+
+    .btn {
+        display: flex; /* Flex for buttons */
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 0.5rem; /* Space between buttons */
+        margin-top: 1rem; /* Space above buttons */
+    }
+
+    .review-form {
+        display: flex; /* Flex for form layout */
+        flex-direction: column; /* Stack inputs vertically */
+        margin-top: 1rem; /* Space above the review form */
+    }
+
+    .rating-options {
+        display: flex; /* Flex layout for rating options */
+        justify-content: center; /* Center rating options */
+        gap: 0.5rem; /* Space between rating inputs */
+    }
+
+    .submit-section {
+        margin-top: 1rem; /* Space above submit button */
+    }
+
+    .review-display {
+        margin-top: 1rem; /* Space above review display */
+    }
+}
+
+@media (min-width: 769px) {
+    .part1 {
+        display: flex; 
+        justify-content: space-between; 
+    }
+
+    .det {
+        max-width: 60%; 
+        margin-left: 1rem; 
+    }
+
+    .image-det {
+        max-width: 35%;
+    }
+}
+

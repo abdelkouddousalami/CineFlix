@@ -37,7 +37,7 @@ photos.forEach((photo, index) => {
         ratingsDiv.style.margin = '10px 0'; 
         ratingsDiv.style.color = '#FFD700';
 
-        // Style the myelement
+ 
         myelement.className = "newdiv";
         myelement.style.width = '100%';
         myelement.style.height = '60vh';
@@ -46,7 +46,7 @@ photos.forEach((photo, index) => {
         myelement.style.position = 'absolute';
         myelement.style.top = '0'; 
         myelement.style.left = '0';
-        myelement.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+        //myelement.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
         myelement.style.color = 'white';
         myelement.style.justifyContent = 'space-between';
         myelement.style.alignItems = 'center'; 
@@ -102,17 +102,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const movieItems = document.querySelectorAll(".movie-item");
 
     searchInput.addEventListener("input", () => {
-        const query = searchInput.value.toLowerCase();
+        const qry = searchInput.value.toLowerCase();
         
         movieItems.forEach(item => {
             const title = item.querySelector("h1").textContent.toLowerCase();
-            item.style.display = title.includes(query) ? "block" : "none";
+            item.style.display = title.includes(qry) ? "block" : "none";
         });
     });
 });
+
 function addToFavorites(movieTitle, imageSrc) {
     let titles = localStorage.getItem("favorites_titles") || "";
     let images = localStorage.getItem("favorites_images") || "";
+
 
     if (!titles.includes(movieTitle)) {
         titles += titles ? `,${movieTitle}` : movieTitle;
@@ -266,5 +268,42 @@ function submitReview() {
       });
     });
   });
+  function darkm(){
+    document.body.classList.toggle("dark")
+  }
+  const style = document.createElement('style');
+  style.type = 'text/css';
+
+  const keyframes = `
+  @keyframes scroll {
+      0% {
+          transform: translateX(0);
+      }
+      100% {
+          transform: translateX(calc(-300px * 9)); /* Adjust to move 9 slides */
+      }
+  }`;
+
+  style.appendChild(document.createTextNode(keyframes));
+
+  document.head.appendChild(style);
+
+  const slideTrack = document.querySelector('.slide-track');
+  //slideTrack.style.animation = 'scroll 40s linear infinite'; 
   
-  
+  const darkModeToggle = document.querySelector('button[onclick="darkm()"]'); 
+const video = document.getElementById('backgroundImage');
+
+darkModeToggle.addEventListener('click', () => {
+    console.log("Current Video Source:", video.currentSrc);
+
+    if (video.currentSrc.includes('images/vd-light.mp4')) {
+        console.log(video.currentSrc.includes('images/vd-light.mp4'))
+        video.src = 'images/vd-dark.mp4';
+    } else {
+        video.src = 'images/vd-light.mp4';
+    }
+
+    video.load();
+    video.play();
+});
